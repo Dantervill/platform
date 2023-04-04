@@ -1,0 +1,6 @@
+org\devnet\inventoryservice\model\Inventory.class
+org\devnet\inventoryservice\InventoryServiceApplication.class
+org\devnet\inventoryservice\service\InventoryService.class
+org\devnet\inventoryservice\exception\InventoryNotFoundException.class
+org\devnet\inventoryservice\repository\InventoryRepository.class
+org\devnet\inventoryservice\controller\InventoryController.class

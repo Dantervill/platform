@@ -1,0 +1,7 @@
+org\devnet\productservice\model\Product.class
+org\devnet\productservice\payload\response\ProductResponse.class
+org\devnet\productservice\repository\ProductRepository.class
+org\devnet\productservice\controller\ProductController.class
+org\devnet\productservice\service\ProductService.class
+org\devnet\productservice\ProductServiceApplication.class
+org\devnet\productservice\payload\request\ProductRequest.class
