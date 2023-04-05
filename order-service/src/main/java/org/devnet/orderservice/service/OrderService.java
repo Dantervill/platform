@@ -25,10 +25,10 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 public class OrderService {
-    private static final String ENDPOINT = "http://localhost:8083/api/v1/inventories";
+    private static final String ENDPOINT = "http://inventory-service/api/v1/inventories";
 
     private final ModelMapper mapper;
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
     private final OrderRepository orderRepository;
 
     public ResponseEntity<?> createOrder(OrderRequest orderRequest) {
@@ -52,7 +52,7 @@ public class OrderService {
     }
 
     private InventoryResponse[] getInventoryResponses(List<String> skuCodes) {
-        return webClient
+        return webClientBuilder.build()
                 .get()
                 .uri(ENDPOINT, uriBuilder ->
                         uriBuilder.queryParam("skuCode", skuCodes).build())
