@@ -18,9 +18,9 @@ public class InventoryService {
     @Transactional(readOnly = true)
     public List<InventoryResponse> isInStock(List<String> skuCodes) throws InterruptedException {
         // simulating a slow behaviour inside the inventory service
-        log.info("Wait Started");
-        Thread.sleep(10000);
-        log.info("Wait Ended");
+//        log.info("Wait Started");
+//        Thread.sleep(10000);
+//        log.info("Wait Ended");
         return inventoryRepository
                 .findBySkuCodeIn(skuCodes)
                 .stream()
